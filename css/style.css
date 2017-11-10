@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(http://miriadna.com/desctopwalls/images/max/View-of-the-valley.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.curtain {
+    position: absolute;
+    height: 100vh;
+    width: 50%;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+#left {
+    background-color: rgba(0, 255, 137, 0.6);
+    animation-name: left-curtain;
+}
+
+#right {
+    background-color: rgba(255, 108, 0, 0.6);
+    right: 0;
+    animation-name: right-curtain;
+}
+
+
+@keyframes left-curtain {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes right-curtain {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 0;
+    }
+}
